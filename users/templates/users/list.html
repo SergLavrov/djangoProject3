@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список пользователей</title>
+</head>
+<body>
+    <h1>{{ header }}</h1>
+
+<table border="1">
+<thead>
+    <tr>
+        <th>first_name</th>
+        <th>last_name</th>
+    </tr>
+</thead>
+<tbody>
+    {% for user in users %}
+        <tr>
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.last_name }}</td>
+            <td>
+                <a href="/users/get_user_profile/{{ user.id }}">Имя</a>
+            </td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+</body>
+</html>

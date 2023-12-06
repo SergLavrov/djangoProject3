@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список задач</title>
+</head>
+<body>
+    <h1>{{ header }}</h1>
+
+<table border="1">
+<thead>
+    <tr>
+        <th>task_name</th>
+    </tr>
+</thead>
+<tbody>
+    {% for task in tasks %}
+        <tr>
+            <td>{{ task.task_name }}</td>
+            <td>
+                <a href="/tasks/get_task_profile/{{ task.id }}">Task name</a>
+            </td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+</body>
+</html>
